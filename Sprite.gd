@@ -19,12 +19,12 @@ func _process(delta):
 	y.y += 1
 	var newPos = x+y
 	if tilem != null:
-		if tilem.get_cell(tile.x,tile.y) == 1:
+		if tilem.get_cell(tile.x,tile.y) == 1 || tilem.get_cell(tile.x,tile.y) == 2:
 			visible = true
 		else: visible = false
 	
 	
-	position.x += (newPos.x - position.x)*0.4
-	position.y += (newPos.y - position.y)*0.4
+	position.x += (newPos.x - position.x)*0.2
+	position.y += (newPos.y - position.y)*0.2
 	
 	
